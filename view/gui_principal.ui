@@ -330,7 +330,7 @@ QPushButton {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../../../../Imagens/formulario_100.png</normaloff>../../../../Imagens/formulario_100.png</iconset>
+             <normaloff>../img/form.png</normaloff>../img/form.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -347,11 +347,11 @@ QPushButton {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../../../../Imagens/database_100.png</normaloff>../../../../Imagens/database_100.png</iconset>
+             <normaloff>../img/dataBase.png</normaloff>../img/dataBase.png</iconset>
            </property>
            <property name="iconSize">
             <size>
-             <width>101</width>
+             <width>100</width>
              <height>100</height>
             </size>
            </property>
@@ -364,7 +364,7 @@ QPushButton {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../../../../Imagens/usuario.png</normaloff>../../../../Imagens/usuario.png</iconset>
+             <normaloff>../img/user.png</normaloff>../img/user.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -381,7 +381,7 @@ QPushButton {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../../../../Imagens/config_100.png</normaloff>../../../../Imagens/config_100.png</iconset>
+             <normaloff>../img/settings.png</normaloff>../img/settings.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -495,10 +495,10 @@ QComboBox QAbstractItemView {
             <item row="1" column="1" colspan="3">
              <widget class="QLineEdit" name="lineEdit_form_nome">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -512,10 +512,10 @@ QComboBox QAbstractItemView {
             <item row="2" column="1" colspan="3">
              <widget class="QLineEdit" name="lineEdit_form_cpf">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -529,10 +529,10 @@ QComboBox QAbstractItemView {
             <item row="3" column="1" colspan="3">
              <widget class="QLineEdit" name="lineEdit_form_endereco">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -546,10 +546,10 @@ QComboBox QAbstractItemView {
             <item row="4" column="1">
              <widget class="QLineEdit" name="lineEdit_form_email">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -563,10 +563,10 @@ QComboBox QAbstractItemView {
             <item row="4" column="3">
              <widget class="QLineEdit" name="lineEdit_form_telefone">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -587,6 +587,9 @@ QComboBox QAbstractItemView {
              <width>740</width>
              <height>160</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
            </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
@@ -609,7 +612,7 @@ QComboBox QAbstractItemView {
               </property>
               <item>
                <property name="text">
-                <string>...</string>
+                <string> </string>
                </property>
               </item>
               <item>
@@ -679,10 +682,10 @@ QComboBox QAbstractItemView {
             <item row="2" column="1" colspan="3">
              <widget class="QLineEdit" name="lineEdit_form_descricao">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -696,10 +699,10 @@ QComboBox QAbstractItemView {
             <item row="3" column="1">
              <widget class="QLineEdit" name="lineEdit_form_inicio">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -713,10 +716,10 @@ QComboBox QAbstractItemView {
             <item row="3" column="3">
              <widget class="QLineEdit" name="lineEdit_form_termino">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -730,10 +733,10 @@ QComboBox QAbstractItemView {
             <item row="4" column="1">
              <widget class="QLineEdit" name="lineEdit_form_local">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -747,10 +750,10 @@ QComboBox QAbstractItemView {
             <item row="4" column="3">
              <widget class="QLineEdit" name="lineEdit_form_valor">
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="placeholderText">
-               <string>...</string>
+               <string/>
               </property>
              </widget>
             </item>
