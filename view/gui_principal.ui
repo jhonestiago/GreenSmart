@@ -26,7 +26,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame_principal">
+   <widget class="QFrame" name="frameMain">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -46,7 +46,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QStackedWidget" name="stackedWidget_principal">
+    <widget class="QStackedWidget" name="stackedWidgetMain">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -61,8 +61,8 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="tela_login">
-      <widget class="QFrame" name="frame_login_principal">
+     <widget class="QWidget" name="pageLogin">
+      <widget class="QFrame" name="frameLoginMain">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -77,7 +77,7 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QFrame" name="frame_login_componentes">
+       <widget class="QFrame" name="frameLoginInputs">
         <property name="geometry">
          <rect>
           <x>280</x>
@@ -119,17 +119,20 @@ QPushButton {
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLineEdit" name="lineEdit_login_user">
+          <widget class="QLineEdit" name="lineEditLoginUsername">
+           <property name="text">
+            <string/>
+           </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
            </property>
            <property name="placeholderText">
-            <string>Login</string>
+            <string>Username</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_login_senha">
+          <widget class="QLineEdit" name="lineEditLoginPassword">
            <property name="echoMode">
             <enum>QLineEdit::Password</enum>
            </property>
@@ -142,7 +145,7 @@ QPushButton {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_login_entrar">
+          <widget class="QPushButton" name="pushButtonLoginEnter">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -158,7 +161,7 @@ QPushButton {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_login_cadastrar">
+          <widget class="QPushButton" name="pushButtonLoginRegister">
            <property name="text">
             <string>Cadastrar</string>
            </property>
@@ -166,7 +169,7 @@ QPushButton {
          </item>
         </layout>
        </widget>
-       <widget class="QFrame" name="frame_login_msg">
+       <widget class="QFrame" name="frameLoginMessages">
         <property name="geometry">
          <rect>
           <x>170</x>
@@ -178,6 +181,7 @@ QPushButton {
         <property name="styleSheet">
          <string notr="true">QLabel {
 	border-radius: 2px;
+	font-size:11px;
 }</string>
         </property>
         <property name="frameShape">
@@ -186,7 +190,7 @@ QPushButton {
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="label_login_msg">
+        <widget class="QLabel" name="labelLoginMessage">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -202,7 +206,7 @@ QPushButton {
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_login_fechar_msg">
+        <widget class="QPushButton" name="pushButtonLoginCloseMessage">
          <property name="geometry">
           <rect>
            <x>391</x>
@@ -226,8 +230,8 @@ QPushButton {
        </widget>
       </widget>
      </widget>
-     <widget class="QWidget" name="tela_sistema">
-      <widget class="QFrame" name="frame_sistema_principal">
+     <widget class="QWidget" name="pageSystem">
+      <widget class="QFrame" name="frameSystemMain">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -242,7 +246,7 @@ QPushButton {
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QFrame" name="frame_sistema_msg">
+       <widget class="QFrame" name="frameSystemMessage">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -254,7 +258,7 @@ QPushButton {
         <property name="styleSheet">
          <string notr="true">QLabel {
 	border-radius: 2px;
-	font-size: 12px;
+	font-size: 11px;
 }</string>
         </property>
         <property name="frameShape">
@@ -263,7 +267,7 @@ QPushButton {
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="label_sistema_msg">
+        <widget class="QLabel" name="labelSystemMessage">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -279,7 +283,7 @@ QPushButton {
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_sistema_fechar_msg">
+        <widget class="QPushButton" name="pushButtonSystemCloseMessage">
          <property name="geometry">
           <rect>
            <x>710</x>
@@ -301,7 +305,7 @@ QPushButton {
          </property>
         </widget>
        </widget>
-       <widget class="QFrame" name="frame_sistema_navegacao">
+       <widget class="QFrame" name="frameSystemNavigation">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -324,7 +328,7 @@ QPushButton {
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QPushButton" name="pushButton_sistema_formulario">
+          <widget class="QPushButton" name="pushButtonSystemForm">
            <property name="text">
             <string/>
            </property>
@@ -341,7 +345,7 @@ QPushButton {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_sistema_database">
+          <widget class="QPushButton" name="pushButtonSystemDatabase">
            <property name="text">
             <string/>
            </property>
@@ -358,7 +362,7 @@ QPushButton {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_sistema_usuarios">
+          <widget class="QPushButton" name="pushButtonSystemUsers">
            <property name="text">
             <string/>
            </property>
@@ -375,7 +379,7 @@ QPushButton {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_sistema_configuracoes">
+          <widget class="QPushButton" name="pushButtonSystemSettings">
            <property name="text">
             <string/>
            </property>
@@ -393,7 +397,7 @@ QPushButton {
          </item>
         </layout>
        </widget>
-       <widget class="QFrame" name="frame_sistema_pages">
+       <widget class="QFrame" name="frameSystemPages">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -447,7 +451,7 @@ QTableWidget{
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QStackedWidget" name="stackedWidget_sistema">
+        <widget class="QStackedWidget" name="stackedWidgetSystem">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -459,8 +463,8 @@ QTableWidget{
          <property name="currentIndex">
           <number>0</number>
          </property>
-         <widget class="QWidget" name="tela_formulario">
-          <widget class="QFrame" name="frame_form">
+         <widget class="QWidget" name="pageForm">
+          <widget class="QFrame" name="frameFormMain">
            <property name="geometry">
             <rect>
              <x>10</x>
@@ -478,7 +482,7 @@ QTableWidget{
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QPushButton" name="pushButton_form_cadastrar">
+           <widget class="QPushButton" name="pushButtonFormRegister">
             <property name="geometry">
              <rect>
               <x>464</x>
@@ -491,7 +495,7 @@ QTableWidget{
              <string>Cadastrar</string>
             </property>
            </widget>
-           <widget class="QFrame" name="frame_form_secao_1">
+           <widget class="QFrame" name="frameFormSection1">
             <property name="geometry">
              <rect>
               <x>0</x>
@@ -508,14 +512,14 @@ QTableWidget{
             </property>
             <layout class="QGridLayout" name="gridLayout">
              <item row="1" column="0">
-              <widget class="QLabel" name="label_form_nome">
+              <widget class="QLabel" name="labelFormName">
                <property name="text">
                 <string>Nome Completo:*</string>
                </property>
               </widget>
              </item>
              <item row="1" column="1" colspan="3">
-              <widget class="QLineEdit" name="lineEdit_form_nome">
+              <widget class="QLineEdit" name="lineEditFormName">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -525,14 +529,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="2" column="0">
-              <widget class="QLabel" name="label_form_cpf">
+              <widget class="QLabel" name="labelFormCpf">
                <property name="text">
                 <string>CPF/CNPJ:*</string>
                </property>
               </widget>
              </item>
              <item row="2" column="1" colspan="3">
-              <widget class="QLineEdit" name="lineEdit_form_cpf">
+              <widget class="QLineEdit" name="lineEditFormCpf">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -542,14 +546,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="3" column="0">
-              <widget class="QLabel" name="label_form_endereco">
+              <widget class="QLabel" name="labelFormAddress">
                <property name="text">
                 <string>Endereço:</string>
                </property>
               </widget>
              </item>
              <item row="3" column="1" colspan="3">
-              <widget class="QLineEdit" name="lineEdit_form_endereco">
+              <widget class="QLineEdit" name="lineEditFormAddress">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -559,14 +563,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="4" column="0">
-              <widget class="QLabel" name="label_form_email">
+              <widget class="QLabel" name="labelFormEmail">
                <property name="text">
                 <string>E-mail:*</string>
                </property>
               </widget>
              </item>
              <item row="4" column="1">
-              <widget class="QLineEdit" name="lineEdit_form_email">
+              <widget class="QLineEdit" name="lineEditFormEmail">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -576,14 +580,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="4" column="2">
-              <widget class="QLabel" name="label_form_telefone">
+              <widget class="QLabel" name="labelFormPhone">
                <property name="text">
                 <string>Telefone:</string>
                </property>
               </widget>
              </item>
              <item row="4" column="3">
-              <widget class="QLineEdit" name="lineEdit_form_telefone">
+              <widget class="QLineEdit" name="lineEditFormPhone">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -593,7 +597,7 @@ QTableWidget{
               </widget>
              </item>
              <item row="0" column="0" colspan="3">
-              <widget class="QLabel" name="label_form_secao_1">
+              <widget class="QLabel" name="labelFormSubtitle1">
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Dados do Contratante&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
@@ -601,7 +605,7 @@ QTableWidget{
              </item>
             </layout>
            </widget>
-           <widget class="QFrame" name="frame_form_secao_2">
+           <widget class="QFrame" name="frameFormSection2">
             <property name="geometry">
              <rect>
               <x>0</x>
@@ -621,14 +625,14 @@ QTableWidget{
             </property>
             <layout class="QGridLayout" name="gridLayout_3">
              <item row="1" column="0">
-              <widget class="QLabel" name="label_form_tipologia">
+              <widget class="QLabel" name="labelFormTypology">
                <property name="text">
                 <string>Tipo de Serviço:*</string>
                </property>
               </widget>
              </item>
              <item row="1" column="1" colspan="3">
-              <widget class="QComboBox" name="comboBox_form_tipologia">
+              <widget class="QComboBox" name="comboBoxFormTypology">
                <property name="layoutDirection">
                 <enum>Qt::LeftToRight</enum>
                </property>
@@ -695,14 +699,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="2" column="0">
-              <widget class="QLabel" name="label_form_descricao">
+              <widget class="QLabel" name="labelFormDescription">
                <property name="text">
                 <string>Descrição:</string>
                </property>
               </widget>
              </item>
              <item row="2" column="1" colspan="3">
-              <widget class="QLineEdit" name="lineEdit_form_descricao">
+              <widget class="QLineEdit" name="lineEditFormDescription">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -712,14 +716,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="3" column="0">
-              <widget class="QLabel" name="label_form_inicio">
+              <widget class="QLabel" name="labelFormStartDate">
                <property name="text">
                 <string>Início:*</string>
                </property>
               </widget>
              </item>
              <item row="3" column="1">
-              <widget class="QLineEdit" name="lineEdit_form_inicio">
+              <widget class="QLineEdit" name="lineEditFormStartDate">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -729,14 +733,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="3" column="2">
-              <widget class="QLabel" name="label_form_termino">
+              <widget class="QLabel" name="labelFormEndDate">
                <property name="text">
                 <string>Fim:</string>
                </property>
               </widget>
              </item>
              <item row="3" column="3">
-              <widget class="QLineEdit" name="lineEdit_form_termino">
+              <widget class="QLineEdit" name="lineEditFormEndDate">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -746,14 +750,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="4" column="0">
-              <widget class="QLabel" name="label_form_local">
+              <widget class="QLabel" name="labelFormLocation">
                <property name="text">
                 <string>Local:*</string>
                </property>
               </widget>
              </item>
              <item row="4" column="1">
-              <widget class="QLineEdit" name="lineEdit_form_local">
+              <widget class="QLineEdit" name="lineEditFormLocation">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -763,14 +767,14 @@ QTableWidget{
               </widget>
              </item>
              <item row="4" column="2">
-              <widget class="QLabel" name="label_form_valor">
+              <widget class="QLabel" name="labelFormValue">
                <property name="text">
                 <string>Valor:</string>
                </property>
               </widget>
              </item>
              <item row="4" column="3">
-              <widget class="QLineEdit" name="lineEdit_form_valor">
+              <widget class="QLineEdit" name="lineEditFormValue">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
@@ -780,7 +784,7 @@ QTableWidget{
               </widget>
              </item>
              <item row="0" column="0" colspan="4">
-              <widget class="QLabel" name="label_form_secao_2">
+              <widget class="QLabel" name="labelFormSubtitle2">
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Dados do Serviço&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
@@ -788,13 +792,13 @@ QTableWidget{
              </item>
             </layout>
            </widget>
-           <zorder>frame_form_secao_2</zorder>
-           <zorder>frame_form_secao_1</zorder>
-           <zorder>pushButton_form_cadastrar</zorder>
+           <zorder>frameFormSection2</zorder>
+           <zorder>frameFormSection1</zorder>
+           <zorder>pushButtonFormRegister</zorder>
           </widget>
          </widget>
-         <widget class="QWidget" name="tela_database">
-          <widget class="QFrame" name="frame_database">
+         <widget class="QWidget" name="pageDatabase">
+          <widget class="QFrame" name="frameDatabaseMain">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -812,7 +816,7 @@ QTableWidget{
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QTabWidget" name="tabWidget_database">
+           <widget class="QTabWidget" name="tabWidgetDatabase">
             <property name="geometry">
              <rect>
               <x>0</x>
@@ -827,13 +831,13 @@ QTableWidget{
 }</string>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
-            <widget class="QWidget" name="tab_database_servicos">
+            <widget class="QWidget" name="tabDatabaseServices">
              <attribute name="title">
               <string>Serviços</string>
              </attribute>
-             <widget class="QFrame" name="frame_database_servicos">
+             <widget class="QFrame" name="frameDatabaseServices">
               <property name="geometry">
                <rect>
                 <x>0</x>
@@ -850,7 +854,7 @@ QTableWidget{
               </property>
               <layout class="QGridLayout" name="gridLayout_2">
                <item row="0" column="0" colspan="2">
-                <widget class="QTableWidget" name="tableWidget_database_servicos">
+                <widget class="QTableWidget" name="tableWidgetDatabaseServices">
                  <property name="editTriggers">
                   <set>QAbstractItemView::NoEditTriggers</set>
                  </property>
@@ -912,14 +916,14 @@ QTableWidget{
                 </widget>
                </item>
                <item row="1" column="0">
-                <widget class="QPushButton" name="pushButton_database_alterar">
+                <widget class="QPushButton" name="pushButtonDatabaseEdit">
                  <property name="text">
                   <string>Alterar</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
-                <widget class="QPushButton" name="pushButton_database_excluir">
+                <widget class="QPushButton" name="pushButtonDatabaseDelete">
                  <property name="styleSheet">
                   <string notr="true">QPushButton{
 	background-color: rgb(255, 0, 0);
@@ -933,11 +937,11 @@ QTableWidget{
               </layout>
              </widget>
             </widget>
-            <widget class="QWidget" name="tab_database_clientes">
+            <widget class="QWidget" name="tabDatabaseClients">
              <attribute name="title">
               <string>Clientes</string>
              </attribute>
-             <widget class="QFrame" name="frame_database_clientes">
+             <widget class="QFrame" name="frameDatabaseClients">
               <property name="geometry">
                <rect>
                 <x>0</x>
@@ -954,7 +958,7 @@ QTableWidget{
               </property>
               <layout class="QGridLayout" name="gridLayout_4">
                <item row="0" column="0" colspan="2">
-                <widget class="QTableWidget" name="tableWidget_database_clientes">
+                <widget class="QTableWidget" name="tableWidgetDatabaseClients">
                  <property name="editTriggers">
                   <set>QAbstractItemView::NoEditTriggers</set>
                  </property>
@@ -986,14 +990,14 @@ QTableWidget{
                 </widget>
                </item>
                <item row="1" column="0">
-                <widget class="QPushButton" name="pushButton_database_alterar_clientes">
+                <widget class="QPushButton" name="pushButtonDatabaseEditClients">
                  <property name="text">
                   <string>Alterar</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
-                <widget class="QPushButton" name="pushButton_database_excluir_clientes">
+                <widget class="QPushButton" name="pushButtonDatabaseDeleteClients">
                  <property name="styleSheet">
                   <string notr="true">QPushButton{
 	background-color: rgb(255, 0, 0);
@@ -1010,8 +1014,8 @@ QTableWidget{
            </widget>
           </widget>
          </widget>
-         <widget class="QWidget" name="tela_usuarios">
-          <widget class="QFrame" name="frame_usuarios">
+         <widget class="QWidget" name="pageUsers">
+          <widget class="QFrame" name="frameUsersMain">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -1031,7 +1035,7 @@ QTableWidget{
            </property>
            <layout class="QGridLayout" name="gridLayout_5">
             <item row="0" column="0" colspan="2">
-             <widget class="QTableWidget" name="tableWidget_usuarios">
+             <widget class="QTableWidget" name="tableWidgetUsers">
               <property name="editTriggers">
                <set>QAbstractItemView::NoEditTriggers</set>
               </property>
@@ -1052,13 +1056,13 @@ QTableWidget{
               </column>
               <column>
                <property name="text">
-                <string>User</string>
+                <string>Username</string>
                </property>
               </column>
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPushButton" name="pushButton_usuarios_excluir">
+             <widget class="QPushButton" name="pushButtonUsersDelete">
               <property name="styleSheet">
                <string notr="true">QPushButton{
 	background-color: rgb(255,0,0);
@@ -1072,8 +1076,8 @@ QTableWidget{
            </layout>
           </widget>
          </widget>
-         <widget class="QWidget" name="tela_config">
-          <widget class="QFrame" name="frame_config">
+         <widget class="QWidget" name="pageSettings">
+          <widget class="QFrame" name="frameSettingsMain">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -1088,7 +1092,7 @@ QTableWidget{
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QFrame" name="frame_config_secao_2">
+           <widget class="QFrame" name="frameSettingsSection2">
             <property name="geometry">
              <rect>
               <x>0</x>
@@ -1105,42 +1109,42 @@ QTableWidget{
             </property>
             <layout class="QGridLayout" name="gridLayout_6">
              <item row="0" column="0" colspan="2">
-              <widget class="QLabel" name="label_config_senha">
+              <widget class="QLabel" name="labelSettingsSubtitle2">
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Alterar Senha&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_config_senha_1">
+              <widget class="QLineEdit" name="lineEditSettingsPassword1">
                <property name="echoMode">
                 <enum>QLineEdit::Password</enum>
                </property>
               </widget>
              </item>
              <item row="1" column="0">
-              <widget class="QLabel" name="label_config_senha_1">
+              <widget class="QLabel" name="labelSettingsPassword1">
                <property name="text">
                 <string>Senha:</string>
                </property>
               </widget>
              </item>
              <item row="1" column="2">
-              <widget class="QLabel" name="label_config_senha_2">
+              <widget class="QLabel" name="labelSettingsPassword2">
                <property name="text">
                 <string>Senha:</string>
                </property>
               </widget>
              </item>
              <item row="1" column="3">
-              <widget class="QLineEdit" name="lineEdit_config_senha_2">
+              <widget class="QLineEdit" name="lineEditSettingsPassword2">
                <property name="echoMode">
                 <enum>QLineEdit::Password</enum>
                </property>
               </widget>
              </item>
              <item row="2" column="3">
-              <widget class="QPushButton" name="pushButton_config_salvar_senha">
+              <widget class="QPushButton" name="pushButtonSettingsSavePassword">
                <property name="text">
                 <string>Salvar</string>
                </property>
@@ -1148,7 +1152,7 @@ QTableWidget{
              </item>
             </layout>
            </widget>
-           <widget class="QFrame" name="frame_config_secao_1">
+           <widget class="QFrame" name="frameSettingsSection1">
             <property name="geometry">
              <rect>
               <x>0</x>
@@ -1165,56 +1169,56 @@ QTableWidget{
             </property>
             <layout class="QGridLayout" name="gridLayout_8">
              <item row="1" column="2" colspan="2">
-              <widget class="QLabel" name="label_config_sobrenome">
+              <widget class="QLabel" name="labelSettingsLastName">
                <property name="text">
                 <string>Sobrenome:</string>
                </property>
               </widget>
              </item>
              <item row="1" column="4">
-              <widget class="QLineEdit" name="lineEdit_config_sobrenome"/>
+              <widget class="QLineEdit" name="lineEditSettingsLastName"/>
              </item>
              <item row="2" column="0">
-              <widget class="QLabel" name="label_config_email">
+              <widget class="QLabel" name="labelSettingsEmail">
                <property name="text">
                 <string>E-mail:</string>
                </property>
               </widget>
              </item>
              <item row="2" column="4">
-              <widget class="QLineEdit" name="lineEdit_config_user"/>
+              <widget class="QLineEdit" name="lineEditSettingsUsername"/>
              </item>
              <item row="0" column="0" colspan="5">
-              <widget class="QLabel" name="label_config_dados">
+              <widget class="QLabel" name="labelSettingsSubtitle1">
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Dados Pessoais&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
              <item row="1" column="0">
-              <widget class="QLabel" name="label_config_nome">
+              <widget class="QLabel" name="labelSettingsFirstName">
                <property name="text">
                 <string>Nome:</string>
                </property>
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_config_nome"/>
+              <widget class="QLineEdit" name="lineEditSettingsFirstName"/>
              </item>
              <item row="3" column="4">
-              <widget class="QPushButton" name="pushButton_config_salvar_dados">
+              <widget class="QPushButton" name="pushButtonSettingsSaveData">
                <property name="text">
                 <string>Salvar</string>
                </property>
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_config_email"/>
+              <widget class="QLineEdit" name="lineEditSettingsEmail"/>
              </item>
              <item row="2" column="2" colspan="2">
-              <widget class="QLabel" name="label_config_user">
+              <widget class="QLabel" name="labelSettingsUsername">
                <property name="text">
-                <string>User:</string>
+                <string>Username:</string>
                </property>
               </widget>
              </item>
@@ -1226,8 +1230,8 @@ QTableWidget{
        </widget>
       </widget>
      </widget>
-     <widget class="QWidget" name="tela_cadastro">
-      <widget class="QFrame" name="frame_cadastro_principal">
+     <widget class="QWidget" name="pageRegistration">
+      <widget class="QFrame" name="frameRegistrationMain">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -1263,7 +1267,7 @@ QPushButton {
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QFrame" name="frame_cadastro_componentes">
+       <widget class="QFrame" name="frameRegistrationInputs">
         <property name="geometry">
          <rect>
           <x>215</x>
@@ -1280,75 +1284,75 @@ QPushButton {
         </property>
         <layout class="QGridLayout" name="gridLayout_7">
          <item row="0" column="0">
-          <widget class="QLabel" name="label_cadastro_nome">
+          <widget class="QLabel" name="labelRegistrationFirstName">
            <property name="text">
             <string>Nome:</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_cadastro_nome"/>
+          <widget class="QLineEdit" name="lineEditRegistrationFirstName"/>
          </item>
          <item row="1" column="0">
-          <widget class="QLabel" name="label_cadastro_sobrenome">
+          <widget class="QLabel" name="labelRegistrationLastName">
            <property name="text">
             <string>Sobrenome:</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_cadastro_sobrenome"/>
+          <widget class="QLineEdit" name="lineEditRegistrationLastName"/>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="label_cadastro_email">
+          <widget class="QLabel" name="labelRegistrationEmail">
            <property name="text">
             <string>E-mail:</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEdit_cadastro_email"/>
+          <widget class="QLineEdit" name="lineEditRegistrationEmail"/>
          </item>
          <item row="3" column="0">
-          <widget class="QLabel" name="label_cadastro_user">
+          <widget class="QLabel" name="labelRegistrationUsername">
            <property name="text">
-            <string>User:</string>
+            <string>Username:</string>
            </property>
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLineEdit" name="lineEdit_cadastro_user"/>
+          <widget class="QLineEdit" name="lineEditRegistrationUsername"/>
          </item>
          <item row="4" column="0">
-          <widget class="QLabel" name="label_cadastro_senha_1">
+          <widget class="QLabel" name="labelRegistrationPassword1">
            <property name="text">
             <string>Senha:</string>
            </property>
           </widget>
          </item>
          <item row="4" column="1">
-          <widget class="QLineEdit" name="lineEdit_cadastro_senha_1">
+          <widget class="QLineEdit" name="lineEditRegistrationPassword1">
            <property name="echoMode">
             <enum>QLineEdit::Password</enum>
            </property>
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="QLabel" name="label_cadastro_senha_2">
+          <widget class="QLabel" name="labelRegistrationPassword2">
            <property name="text">
             <string>Senha:</string>
            </property>
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QLineEdit" name="lineEdit_cadastro_senha_2">
+          <widget class="QLineEdit" name="lineEditRegistrationPassword2">
            <property name="echoMode">
             <enum>QLineEdit::Password</enum>
            </property>
           </widget>
          </item>
          <item row="6" column="1">
-          <widget class="QPushButton" name="pushButton_cadastro_cadastrar">
+          <widget class="QPushButton" name="pushButtonRegistrationSave">
            <property name="text">
             <string>Cadastrar</string>
            </property>
@@ -1356,63 +1360,65 @@ QPushButton {
          </item>
         </layout>
        </widget>
-      </widget>
-      <widget class="QFrame" name="frame_login_msg_2">
-       <property name="geometry">
-        <rect>
-         <x>180</x>
-         <y>130</y>
-         <width>440</width>
-         <height>62</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel {
-	border-radius: 2px;
-}</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QLabel" name="label_login_msg_2">
+       <widget class="QFrame" name="frameRegistrationMessage">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>373</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Mensagem</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_login_fechar_msg_2">
-        <property name="geometry">
-         <rect>
-          <x>391</x>
-          <y>10</y>
-          <width>40</width>
-          <height>40</height>
+          <x>170</x>
+          <y>120</y>
+          <width>440</width>
+          <height>62</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton{
+         <string notr="true">QLabel {
+	border-radius: 2px;
+	font-size:11px;
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="labelRegistrationMessage">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>373</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Mensagem</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonRegistrationCloseMessage">
+         <property name="geometry">
+          <rect>
+           <x>391</x>
+           <y>10</y>
+           <width>40</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
 	background-color: rgb(255, 0, 0);
 	border-radius: 20px;
 	font-size: 14px;
 	color: white;
 }</string>
-        </property>
-        <property name="text">
-         <string>X</string>
-        </property>
+         </property>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
        </widget>
       </widget>
      </widget>
