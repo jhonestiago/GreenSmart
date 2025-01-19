@@ -247,13 +247,14 @@ QPushButton {
          <rect>
           <x>10</x>
           <y>140</y>
-          <width>761</width>
+          <width>760</width>
           <height>61</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">QLabel {
 	border-radius: 2px;
+	font-size: 12px;
 }</string>
         </property>
         <property name="frameShape">
@@ -390,19 +391,6 @@ QPushButton {
            </property>
           </widget>
          </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
         </layout>
        </widget>
        <widget class="QStackedWidget" name="stackedWidget_sistema">
@@ -410,17 +398,684 @@ QPushButton {
          <rect>
           <x>10</x>
           <y>200</y>
-          <width>761</width>
-          <height>371</height>
+          <width>760</width>
+          <height>370</height>
          </rect>
         </property>
         <property name="currentIndex">
          <number>0</number>
         </property>
-        <widget class="QWidget" name="tela_formulario"/>
-        <widget class="QWidget" name="tela_database"/>
-        <widget class="QWidget" name="tela_usuarios"/>
-        <widget class="QWidget" name="tela_config"/>
+        <widget class="QWidget" name="tela_formulario">
+         <widget class="QFrame" name="frame_form">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>740</width>
+            <height>360</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	font-size: 14px;
+}
+
+QLineEdit {
+	height: 25px;
+	background-color: rgb(234, 236, 231);
+	border: 1px solid rgb(163, 168, 171);
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+QPushButton {
+	height:25px;
+	background-color: rgb(79, 200, 122);
+	border-radius: 5px;
+	font-size:14px;
+	color: white;
+}
+
+QComboBox{
+	text-align: center;
+	height: 25px;
+	font-size: 14px;
+	background-color:  rgb(234, 236, 231);
+	border: 1px solid rgb(163, 168, 171);
+	border-radius: 5px;
+}
+
+QComboBox QAbstractItemView {
+	background-color:  rgb(234, 236, 231);
+	text-align: center;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="pushButton_form_cadastrar">
+           <property name="geometry">
+            <rect>
+             <x>464</x>
+             <y>328</y>
+             <width>267</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Cadastrar</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="frame_form_secao_1">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>740</width>
+             <height>160</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_form_nome">
+              <property name="text">
+               <string>Nome Completo:*</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" colspan="3">
+             <widget class="QLineEdit" name="lineEdit_form_nome">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_form_cpf">
+              <property name="text">
+               <string>CPF/CNPJ:*</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" colspan="3">
+             <widget class="QLineEdit" name="lineEdit_form_cpf">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_form_endereco">
+              <property name="text">
+               <string>Endereço:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1" colspan="3">
+             <widget class="QLineEdit" name="lineEdit_form_endereco">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_form_email">
+              <property name="text">
+               <string>E-mail:*</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="lineEdit_form_email">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLabel" name="label_form_telefone">
+              <property name="text">
+               <string>Telefone:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="QLineEdit" name="lineEdit_form_telefone">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="3">
+             <widget class="QLabel" name="label_form_secao_1">
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Dados do Contratante&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QFrame" name="frame_form_secao_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>160</y>
+             <width>740</width>
+             <height>160</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_form_tipologia">
+              <property name="text">
+               <string>Tipo de Serviço:*</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" colspan="3">
+             <widget class="QComboBox" name="comboBox_form_tipologia">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>...</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Cadastro Ambiental Rural (CAR)</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Gestão Ambiental</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Inventário de Fauna</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Licenciamento Ambiental</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Manejo Integrado de Pragas</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Outorga de Recursos Hídricos</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Plano de Gerenciamento de Resíduos (PGR)</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Plano de Recuperação de Áreas Degradadas (PRAD)</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Serviços de Geoprocessamento</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Treinamento e Capacitação Ambiental</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Outros</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_form_descricao">
+              <property name="text">
+               <string>Descrição:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" colspan="3">
+             <widget class="QLineEdit" name="lineEdit_form_descricao">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_form_inicio">
+              <property name="text">
+               <string>Início:*</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="lineEdit_form_inicio">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="label_form_termino">
+              <property name="text">
+               <string>Fim:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QLineEdit" name="lineEdit_form_termino">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_form_local">
+              <property name="text">
+               <string>Local:*</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="lineEdit_form_local">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLabel" name="label_form_valor">
+              <property name="text">
+               <string>Valor:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="QLineEdit" name="lineEdit_form_valor">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="4">
+             <widget class="QLabel" name="label_form_secao_2">
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Dados do Serviço&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <zorder>frame_form_secao_2</zorder>
+          <zorder>frame_form_secao_1</zorder>
+          <zorder>pushButton_form_cadastrar</zorder>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tela_database">
+         <widget class="QFrame" name="frame_database">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>760</width>
+            <height>360</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	height:25px;
+	background-color: rgb(79, 200, 122);
+	border-radius: 5px;
+	font-size:14px;
+	color: white;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QTabWidget" name="tabWidget_database">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>760</width>
+             <height>341</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget{
+	font-size: 14px;
+}</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab_database_servicos">
+            <attribute name="title">
+             <string>Serviços</string>
+            </attribute>
+            <widget class="QFrame" name="frame_database_servicos">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>750</width>
+               <height>310</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0" colspan="2">
+               <widget class="QTableWidget" name="tableWidget_database_servicos">
+                <property name="editTriggers">
+                 <set>QAbstractItemView::NoEditTriggers</set>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>Nome</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>CPF/CNPJ</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Endereço</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>E-mail</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Telefone</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Tipo de Serviço</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Descrição</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Inicio</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Fim</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Local</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Valor</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pushButton_database_alterar">
+                <property name="text">
+                 <string>Alterar</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="pushButton_database_excluir">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	background-color: rgb(255, 0, 0);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Excluir</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="tab_database_clientes">
+            <attribute name="title">
+             <string>Clientes</string>
+            </attribute>
+            <widget class="QFrame" name="frame_database_clientes">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>750</width>
+               <height>310</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0" colspan="2">
+               <widget class="QTableWidget" name="tableWidget_database_clientes">
+                <property name="editTriggers">
+                 <set>QAbstractItemView::NoEditTriggers</set>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>Nome</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>CPF/CNPJ</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Endereço</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>E-mail</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Telefone</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pushButton_database_alterar_clientes">
+                <property name="text">
+                 <string>Alterar</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="pushButton_database_excluir_clientes">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	background-color: rgb(255, 0, 0);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Excluir</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tela_usuarios">
+         <widget class="QFrame" name="frame_usuarios">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>760</width>
+            <height>350</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTableWidget{
+	font-size: 14px;
+}
+
+QPushButton {
+	height:25px;
+	background-color: rgb(79, 200, 122);
+	border-radius: 5px;
+	font-size:14px;
+	color: white;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0" colspan="2">
+            <widget class="QTableWidget" name="tableWidget_usuarios">
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <column>
+              <property name="text">
+               <string>Nome</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Sobrenome</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>User</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButton_usuarios_excluir">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	background-color: rgb(255,0,0);
+}</string>
+             </property>
+             <property name="text">
+              <string>Excluir</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tela_config">
+         <widget class="QFrame" name="frame_config">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>760</width>
+            <height>350</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </widget>
        </widget>
       </widget>
      </widget>
