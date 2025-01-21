@@ -10,6 +10,7 @@ class Main(Ui_MainWindow, QMainWindow):
         super().__init__(parent)
         super().setupUi(self)
         self.__init_components()
+        self.__flag = False
         self.__error_color = 'background-color: rgb(204, 41, 54); color: rgb(255, 255, 255);'
         self.__sucess_color = 'background-color: rgb(101, 184, 145);'
 
@@ -30,6 +31,7 @@ class Main(Ui_MainWindow, QMainWindow):
         self.pushButtonSystemDatabase.clicked.connect(self.__pageDatabase)
         self.pushButtonSystemUsers.clicked.connect(self.__pageUsers)
         self.pushButtonSystemSettings.clicked.connect(self.__pageSettings)
+        self.pushButtonSystemCloseMessage.clicked.connect(self.frameSystemMessage.hide)
 
         #.pageForm
         #.pageDatabase
@@ -47,6 +49,7 @@ class Main(Ui_MainWindow, QMainWindow):
             self.lineEditLoginPassword.clear()
             self.frameLoginMessages.hide()
             self.__pageForm()
+            self.__flag = True
         else:
             message = 'Usuário ou Senha incorretos'
             self.labelLoginMessage.setText(message)
@@ -70,8 +73,14 @@ class Main(Ui_MainWindow, QMainWindow):
         self.stackedWidgetSystem.setCurrentWidget(self.pageUsers)
 
     def __pageSettings(self) -> None:
-        self.stackedWidgetMain.setCurrentWidget(self.pageSystem)
-        self.stackedWidgetSystem.setCurrentWidget(self.pageSettings)
+        if self.__flag:
+            self.stackedWidgetMain.setCurrentWidget(self.pageSystem)
+            self.stackedWidgetSystem.setCurrentWidget(self.pageSettings)
+        else:
+            message = 'Acesso negado'
+            self.labelSystemMessage.setText(message)
+            self.labelSystemMessage.setStyleSheet(self.__error_color)
+            self.frameSystemMessage.show()
 
     def __pageRegistration(self) -> None:
         self.stackedWidgetMain.setCurrentWidget(self.pageRegistration)
