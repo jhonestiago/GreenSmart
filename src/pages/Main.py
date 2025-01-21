@@ -69,18 +69,18 @@ class Main(Ui_MainWindow, QMainWindow):
         self.stackedWidgetSystem.setCurrentWidget(self.pageDatabase)
 
     def __pageUsers(self) -> None:
-        self.stackedWidgetMain.setCurrentWidget(self.pageSystem)
-        self.stackedWidgetSystem.setCurrentWidget(self.pageUsers)
-
-    def __pageSettings(self) -> None:
         if self.__flag:
             self.stackedWidgetMain.setCurrentWidget(self.pageSystem)
-            self.stackedWidgetSystem.setCurrentWidget(self.pageSettings)
+            self.stackedWidgetSystem.setCurrentWidget(self.pageUsers)
         else:
             message = 'Acesso negado'
             self.labelSystemMessage.setText(message)
             self.labelSystemMessage.setStyleSheet(self.__error_color)
             self.frameSystemMessage.show()
+
+    def __pageSettings(self) -> None:        
+            self.stackedWidgetMain.setCurrentWidget(self.pageSystem)
+            self.stackedWidgetSystem.setCurrentWidget(self.pageSettings)
 
     def __pageRegistration(self) -> None:
         self.stackedWidgetMain.setCurrentWidget(self.pageRegistration)
