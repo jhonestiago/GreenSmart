@@ -21,12 +21,23 @@ class Main(Ui_MainWindow, QMainWindow):
         self.pushButtonLoginCloseMessage.clicked.connect(self.frameLoginMessages.hide)
 
         #pageSystem
+        self.frameSystemMessage.hide()
         self.pushButtonSystemForm.setIcon(QIcon('src/img/form.png'))
         self.pushButtonSystemDatabase.setIcon(QIcon('src/img/database.png'))
         self.pushButtonSystemUsers.setIcon(QIcon('src/img/user.png'))
         self.pushButtonSystemSettings.setIcon(QIcon('src/img/settings.png'))
+        self.pushButtonSystemForm.clicked.connect(self.__pageForm)
+        self.pushButtonSystemDatabase.clicked.connect(self.__pageDatabase)
+        self.pushButtonSystemUsers.clicked.connect(self.__pageUsers)
+        self.pushButtonSystemSettings.clicked.connect(self.__pageSettings)
 
         #.pageForm
+        #.pageDatabase
+        #.pageUsers
+        #.pageSettings
+
+        #pageRegistration
+        self.frameRegistrationMessage.hide()
 
     def __enter(self) -> None:
         username = self.lineEditLoginUsername.text()

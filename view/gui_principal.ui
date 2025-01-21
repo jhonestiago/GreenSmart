@@ -334,7 +334,7 @@ QPushButton {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../img/form.png</normaloff>../img/form.png</iconset>
+             <normaloff>../src/img/form.png</normaloff>../src/img/form.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -351,7 +351,7 @@ QPushButton {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../img/dataBase.png</normaloff>../img/dataBase.png</iconset>
+             <normaloff>../src/img/database.png</normaloff>../src/img/database.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -368,7 +368,7 @@ QPushButton {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../img/user.png</normaloff>../img/user.png</iconset>
+             <normaloff>../src/img/user.png</normaloff>../src/img/user.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -385,7 +385,7 @@ QPushButton {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../img/settings.png</normaloff>../img/settings.png</iconset>
+             <normaloff>../src/img/settings.png</normaloff>../src/img/settings.png</iconset>
            </property>
            <property name="iconSize">
             <size>
