@@ -1,4 +1,9 @@
+import numpy as np
+
 class User:
+    '''
+    Cria a classe User
+    '''
 
     def __init__(self):
         self.__first_name:str = ''
@@ -6,19 +11,22 @@ class User:
         self.__username:str = ''
         self.__password_1:str = ''
         self.__password_2:str = ''
-        self.error_message:str = ''
+        self.error_message = np.zeros(5,dtype=object)
 
     @property
     def first_name(self) -> str:
+        '''
+        Retorna o Nome
+        '''
         return self.__first_name
 
     @first_name.setter
     def first_name(self, first_name) -> None:
+        message = 'O campo Nome é obrigatório!'
         if len(first_name) != 0:
             self.__first_name = first_name
         else:
-            message = 'O campo Nome é obrigatório!'
-            self.error_message = message
+            self.error_message[0] = message
 
     @property
     def last_name(self) -> str:
