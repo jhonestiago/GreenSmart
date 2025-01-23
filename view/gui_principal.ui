@@ -395,6 +395,23 @@ QPushButton {
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonSystemExit">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../src/img/exit.png</normaloff>../src/img/exit.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+          </widget>
+         </item>
         </layout>
        </widget>
        <widget class="QFrame" name="frameSystemPages">
@@ -1273,7 +1290,7 @@ QPushButton {
           <x>215</x>
           <y>185</y>
           <width>350</width>
-          <height>210</height>
+          <height>265</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -1290,9 +1307,6 @@ QPushButton {
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEditRegistrationFirstName"/>
-         </item>
          <item row="1" column="0">
           <widget class="QLabel" name="labelRegistrationLastName">
            <property name="text">
@@ -1303,15 +1317,15 @@ QPushButton {
          <item row="1" column="1">
           <widget class="QLineEdit" name="lineEditRegistrationLastName"/>
          </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEditRegistrationFirstName"/>
+         </item>
          <item row="2" column="0">
           <widget class="QLabel" name="labelRegistrationEmail">
            <property name="text">
             <string>E-mail:</string>
            </property>
           </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEditRegistrationEmail"/>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="labelRegistrationUsername">
@@ -1323,8 +1337,18 @@ QPushButton {
          <item row="3" column="1">
           <widget class="QLineEdit" name="lineEditRegistrationUsername"/>
          </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEditRegistrationEmail"/>
+         </item>
          <item row="4" column="0">
           <widget class="QLabel" name="labelRegistrationPassword1">
+           <property name="text">
+            <string>Senha:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="labelRegistrationPassword2">
            <property name="text">
             <string>Senha:</string>
            </property>
@@ -1337,10 +1361,10 @@ QPushButton {
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="labelRegistrationPassword2">
+         <item row="6" column="1">
+          <widget class="QPushButton" name="pushButtonRegistrationSave">
            <property name="text">
-            <string>Senha:</string>
+            <string>Cadastrar</string>
            </property>
           </widget>
          </item>
@@ -1351,10 +1375,15 @@ QPushButton {
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
-          <widget class="QPushButton" name="pushButtonRegistrationSave">
+         <item row="7" column="1">
+          <widget class="QPushButton" name="pushButtonRegistrationBack">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background-color: rgb(255, 0, 0);
+}</string>
+           </property>
            <property name="text">
-            <string>Cadastrar</string>
+            <string>Voltar</string>
            </property>
           </widget>
          </item>

@@ -27,19 +27,35 @@ class Main(Ui_MainWindow, QMainWindow):
         self.pushButtonSystemDatabase.setIcon(QIcon('src/img/database.png'))
         self.pushButtonSystemUsers.setIcon(QIcon('src/img/user.png'))
         self.pushButtonSystemSettings.setIcon(QIcon('src/img/settings.png'))
+        self.pushButtonSystemExit.setIcon(QIcon('src/img/exit.png'))
         self.pushButtonSystemForm.clicked.connect(self.__pageForm)
         self.pushButtonSystemDatabase.clicked.connect(self.__pageDatabase)
         self.pushButtonSystemUsers.clicked.connect(self.__pageUsers)
         self.pushButtonSystemSettings.clicked.connect(self.__pageSettings)
+        self.pushButtonSystemExit.clicked.connect(self.__pageLogin)
         self.pushButtonSystemCloseMessage.clicked.connect(self.frameSystemMessage.hide)
 
         #.pageForm
+        #self.pushButtonFormRegister.clicked.connect()
+
         #.pageDatabase
+        #self.pushButtonDatabaseEdit.clicked.connect()
+        #self.pushButtonDatabaseDelete.clicked.connect()
+        #self.pushButtonDatabaseEditClients.clicked.connect()
+        #self.pushButtonDatabaseDeleteClients.clicked.connect()
+
         #.pageUsers
+        #self.pushButtonUsersDelete.clicked.connect()
+
         #.pageSettings
+        #self.pushButtonSettingsSaveData.clicked.connect()
+        #self.pushButtonSettingsSavePassword.clicked.connect()
 
         #pageRegistration
         self.frameRegistrationMessage.hide()
+        #self.pushButtonRegistrationSave.clicked.connect()
+        self.pushButtonRegistrationBack.clicked.connect(self.__pageLogin)
+        self.pushButtonRegistrationCloseMessage.clicked.connect(self.frameRegistrationMessage.hide)
 
     def __enter(self) -> None:
         username = self.lineEditLoginUsername.text()
