@@ -1,4 +1,4 @@
-class Usuario:
+class User:
 
     def __init__(self):
         self.__first_name:str = ''
@@ -44,4 +44,14 @@ class Usuario:
             message = 'O campo username é obrigatório'
             self.error_message = message
 
-    # Continua
+    @property
+    def password_1(self) -> str:
+        return self.__password_1
+
+    @password_1.setter
+    def password_1(self, password_1) -> None:
+        if len(password_1) != 0:
+            self.__password_1 = password_1
+        else:
+            message = 'O campo Senha é obrigatório'
+            self.error_message = message
