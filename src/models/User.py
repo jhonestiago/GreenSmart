@@ -63,8 +63,8 @@ class User:
                 self.__password_1 = password
                 self.__error_message[3] = 0
             else:
-                mensagem = 'A senha deve possuir entre 5 a 8 caracteres'
-                self.__error_message[3] = mensagem
+                message = 'A senha deve possuir entre 5 a 8 caracteres'
+                self.__error_message[3] = message
         else:
             message = 'O campo Senha é obrigatório'
             self.__error_message[3] = message
@@ -80,11 +80,11 @@ class User:
                 self.__password_2 = password
                 self.__error_message[4] = 0
             else:
-                mensagem = 'As senhas não são iguais'
-                self.__error_message[4] = mensagem
+                message = 'As senhas não são iguais'
+                self.__error_message[4] = message
         else:
             message = 'O campo Senha é obrigatório'
-            self.__error_message[4] = mensagem
+            self.__error_message[4] = message
 
     @property
     def error_message(self) -> list:
