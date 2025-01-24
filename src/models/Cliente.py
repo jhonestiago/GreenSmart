@@ -3,11 +3,11 @@ import numpy as np
 class Cliente:
 
     def __init__(self) -> None:
-        self.__name:str = ''
-        self.__cpf_cnpj:str = ''
-        self.__address:str = ''
-        self.__email:str = ''
-        self.__phone_number:str = ''
+        self.__name = None
+        self.__cpf_cnpj = None
+        self.__address = None
+        self.__email = None
+        self.__phone_number = None
         self.__error_message = np.zeros(3,dtype=object)
 
     @property

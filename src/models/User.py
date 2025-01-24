@@ -6,12 +6,18 @@ class User:
     '''
 
     def __init__(self):
-        self.__first_name:str = ''
-        self.__last_name:str = ''
-        self.__username:str = ''
-        self.__password_1:str = ''
-        self.__password_2:str = ''
+        self.__first_name = None
+        self.__last_name = None
+        self.__username = None
+        self.__password_1 = None
+        self.__password_2 = None
         self.__error_message = np.zeros(5,dtype=object)
+
+    def error_message(self) -> list:
+        error_message = []
+        for message in self.__error_message:
+            error_message.append(message)
+        return error_message
 
     @property
     def first_name(self) -> str:
@@ -85,11 +91,3 @@ class User:
         else:
             message = 'O campo Senha é obrigatório'
             self.__error_message[4] = message
-
-    @property
-    def error_message(self) -> list:
-        return self.__error_message
-
-    @error_message.setter
-    def error_message(self, lista) -> None:
-        pass
