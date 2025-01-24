@@ -14,7 +14,7 @@ class Main(Ui_MainWindow, QMainWindow):
         super().__init__(parent)
         super().setupUi(self)
         self.__init_components()
-        self.__user_control = UserControl()
+        self.__init_controllers()
         self.__init_users()
         self.__flag = False
         self.__error_color = 'background-color: rgb(204, 41, 54); color: rgb(255, 255, 255);'
@@ -62,6 +62,9 @@ class Main(Ui_MainWindow, QMainWindow):
         #self.pushButtonRegistrationSave.clicked.connect()
         self.pushButtonRegistrationBack.clicked.connect(self.__pageLogin)
         self.pushButtonRegistrationCloseMessage.clicked.connect(self.frameRegistrationMessage.hide)
+
+    def __init_controllers(self) -> None:
+        self.__user_control = UserControl()
 
     def __init_users(self) -> None:
         '''
