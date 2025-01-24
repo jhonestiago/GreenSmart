@@ -1,4 +1,4 @@
-from models.Cliente import Cliente
+from models.Client import Client
 
 class Service:
 

@@ -1,6 +1,6 @@
 import numpy as np
 
-class Cliente:
+class Client:
 
     def __init__(self) -> None:
         self.__name = None
