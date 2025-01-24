@@ -4,12 +4,18 @@ from gui_principal import Ui_MainWindow
 from PyQt6.QtWidgets import QMainWindow, QApplication
 from PyQt6.QtGui import QIcon
 
+from src.models.User import User
+
+from src.controllers.UserControl import UserControl
+
 class Main(Ui_MainWindow, QMainWindow):
 
     def __init__(self, parent=None) -> None:
         super().__init__(parent)
         super().setupUi(self)
         self.__init_components()
+        self.__user_control = UserControl()
+        self.__init_users()
         self.__flag = False
         self.__error_color = 'background-color: rgb(204, 41, 54); color: rgb(255, 255, 255);'
         self.__sucess_color = 'background-color: rgb(101, 184, 145);'
@@ -56,6 +62,17 @@ class Main(Ui_MainWindow, QMainWindow):
         #self.pushButtonRegistrationSave.clicked.connect()
         self.pushButtonRegistrationBack.clicked.connect(self.__pageLogin)
         self.pushButtonRegistrationCloseMessage.clicked.connect(self.frameRegistrationMessage.hide)
+
+    def __init_users(self) -> None:
+        '''
+        Inicializa o usuario admin
+        '''
+        admin = User()
+        admin.first_name = 'admin'
+        admin.username = 'admin'
+        admin.password_1 = '12345'
+        admin.password_2 = '12345'
+        self.__user_control.add_user(admin)
 
     def __enter(self) -> None:
         username = self.lineEditLoginUsername.text()
