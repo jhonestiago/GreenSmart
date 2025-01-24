@@ -23,7 +23,7 @@ class UserControl:
         '''
         access_key = False
         for user in self.__users:
-            if (user.username == username) and (user.password_1 == password):
+            if (user.__username == username) and (user.__password_1 == password):
                 access_key = True
                 break
         return access_key
@@ -56,5 +56,5 @@ class UserControl:
         return self.__users
 
     @users.setter
-    def users(self, users: List[User]) -> None:
+    def users(self, users:List[User]) -> None:
         pass
