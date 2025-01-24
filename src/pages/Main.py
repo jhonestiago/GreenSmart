@@ -80,17 +80,19 @@ class Main(Ui_MainWindow, QMainWindow):
     def __enter(self) -> None:
         username = self.lineEditLoginUsername.text()
         password = self.lineEditLoginPassword.text()
-        if username == "admin" and  password == "12345":
-            self.lineEditLoginUsername.clear()
-            self.lineEditLoginPassword.clear()
-            self.frameLoginMessages.hide()
-            self.__flag = True
-            self.__pageForm()
-        elif username == 'jones' and password == '12345':
-            self.lineEditLoginUsername.clear()
-            self.lineEditLoginPassword.clear()
-            self.frameLoginMessages.hide()
-            self.__pageForm()
+        if self.__user_control.find_user(username, password):
+            if username == 'admin':
+                self.lineEditLoginUsername.clear()
+                self.lineEditLoginPassword.clear()
+                self.frameLoginMessages.hide()
+                self.__flag = True
+                self.__pageForm()
+            else:
+                self.lineEditLoginUsername.clear()
+                self.lineEditLoginPassword.clear()
+                self.frameLoginMessages.hide()
+                self.__flag = False
+                self.__pageForm()
         else:
             message = 'Usuário ou Senha incorretos'
             self.labelLoginMessage.setText(message)
