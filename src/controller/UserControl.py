@@ -18,12 +18,12 @@ class UserControl:
         Verifica se um usuário com as credenciais 
         fornecidas existe na lista de usuários.
         '''
-        access = False
+        access_key = False
         for user in self.__users:
             if (user.username == username) and (user.password_1 == password):
-                access = True
+                access_key = True
                 break
-        return access
+        return access_key
 
     def get_user(self, index:int) -> User:
         '''
