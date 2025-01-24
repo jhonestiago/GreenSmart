@@ -100,6 +100,8 @@ class Main(Ui_MainWindow, QMainWindow):
             self.frameLoginMessages.show()
 
 
+    # Navegação
+
     def __pageLogin(self) -> None:
         self.stackedWidgetMain.setCurrentWidget(self.pageLogin)
 
@@ -121,9 +123,9 @@ class Main(Ui_MainWindow, QMainWindow):
             self.labelSystemMessage.setStyleSheet(self.__error_color)
             self.frameSystemMessage.show()
 
-    def __pageSettings(self) -> None:        
-            self.stackedWidgetMain.setCurrentWidget(self.pageSystem)
-            self.stackedWidgetSystem.setCurrentWidget(self.pageSettings)
+    def __pageSettings(self) -> None:
+        self.stackedWidgetMain.setCurrentWidget(self.pageSystem)
+        self.stackedWidgetSystem.setCurrentWidget(self.pageSettings)
 
     def __pageRegistration(self) -> None:
         self.stackedWidgetMain.setCurrentWidget(self.pageRegistration)
