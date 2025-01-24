@@ -123,7 +123,4 @@ class User:
 
     @messages.setter
     def messages(self, messages:list) -> None:
-        '''
-        Altera a lista de mensagens
-        '''
         pass

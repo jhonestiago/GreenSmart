@@ -23,7 +23,7 @@ class UserControl:
         '''
         access_key = False
         for user in self.__users:
-            if (user.__username == username) and (user.__password_1 == password):
+            if (user.username == username) and (user.password_1 == password):
                 access_key = True
                 break
         return access_key
