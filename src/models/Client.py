@@ -67,5 +67,5 @@ class Client:
         return self.__error_message
 
     @error_message.setter
-    def error_message(self, list:list) -> None:
+    def error_message(self, list_message:list) -> None:
         pass
