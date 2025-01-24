@@ -56,5 +56,5 @@ class UserControl:
         return self.__users
 
     @users.setter
-    def users(self, users_list: List[User]) -> None:
+    def users(self, users: List[User]) -> None:
         pass
