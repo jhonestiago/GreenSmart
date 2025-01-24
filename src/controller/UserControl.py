@@ -2,6 +2,9 @@ from typing import List
 from src.models.User import User
 
 class UserControl:
+    '''
+    Cria a classe UserControl
+    '''
 
     def __init__(self) -> None:
         self.__users:List[User] = []
