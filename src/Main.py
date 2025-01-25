@@ -4,9 +4,9 @@ from gui_principal import Ui_MainWindow
 from PyQt6.QtWidgets import QMainWindow, QApplication
 from PyQt6.QtGui import QIcon
 
-from src.models.User import User
+from models.User import User
 
-from src.controllers.UserControl import UserControl
+from controllers.UserControl import UserControl
 
 class Main(Ui_MainWindow, QMainWindow):
 

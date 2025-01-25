@@ -1,5 +1,5 @@
 from typing import List
-from src.models.User import User
+from models.User import User
 
 class UserControl:
     '''
