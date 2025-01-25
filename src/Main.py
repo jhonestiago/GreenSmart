@@ -59,7 +59,7 @@ class Main(Ui_MainWindow, QMainWindow):
 
         #pageRegistration
         self.frameRegistrationMessage.hide()
-        #self.pushButtonRegistrationSave.clicked.connect()
+        self.pushButtonRegistrationSave.clicked.connect(self.__register_user)
         self.pushButtonRegistrationBack.clicked.connect(self.__pageLogin)
         self.pushButtonRegistrationCloseMessage.clicked.connect(self.frameRegistrationMessage.hide)
 
@@ -101,7 +101,8 @@ class Main(Ui_MainWindow, QMainWindow):
 
 
     # Novos Usuários
-
+    def __register_user(self) -> None:
+        pass
 
     # Navegação
 
