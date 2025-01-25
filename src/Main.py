@@ -100,6 +100,9 @@ class Main(Ui_MainWindow, QMainWindow):
             self.frameLoginMessages.show()
 
 
+    # Novos Usuários
+    
+        
     # Navegação
 
     def __pageLogin(self) -> None:
