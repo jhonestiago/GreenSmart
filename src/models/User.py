@@ -6,10 +6,11 @@ class User:
     def __init__(self):
         self.__first_name = None
         self.__last_name = None
+        self.__email = None
         self.__username = None
         self.__password_1 = None
         self.__password_2 = None
-        self.__messages = np.zeros(5, dtype=object)
+        self.__messages = np.zeros(6, dtype=object)
 
     @property
     def first_name(self) -> str:
@@ -50,6 +51,25 @@ class User:
             self.__messages[1] = message
 
     @property
+    def email(self) -> str:
+        '''
+        Retorna o email do usuário
+        '''
+        return self.__email
+
+    @email.setter
+    def email(self, email:str) -> None:
+        '''
+        Altera o email do usuário
+        '''
+        if len(email) != 0:
+            self.__email = email
+            self.__messages[2] = 0
+        else:
+            message = 'O campo Email é obrigatório'
+            self.__messages[2] = message
+
+    @property
     def username(self) -> str:
         '''
         Retorna o nome de usuário.
@@ -63,10 +83,10 @@ class User:
         '''
         if len(username) != 0:
             self.__username = username
-            self.__messages[2] = 0
+            self.__messages[3] = 0
         else:
             message = 'O campo Username é obrigatório'
-            self.__messages[2] = message
+            self.__messages[3] = message
 
     @property
     def password_1(self) -> str:
@@ -83,13 +103,13 @@ class User:
         if len(password) != 0:
             if len(password) >= 5 and len(password) <= 8:
                 self.__password_1 = password
-                self.__messages[3] = 0
+                self.__messages[4] = 0
             else:
                 message = 'A senha deve ter entre 5 e 8 caracteres'
-                self.__messages[3] = message
+                self.__messages[4] = message
         else:
             message = 'O campo Senha é obrigatório'
-            self.__messages[3] = message
+            self.__messages[4] = message
 
     @property
     def password_2(self) -> str:
@@ -106,13 +126,13 @@ class User:
         if len(password) != 0:
             if password == self.__password_1:
                 self.__password_2 = password
-                self.__messages[4] = 0
+                self.__messages[5] = 0
             else:
                 message = 'As senhas não coincidem'
-                self.__messages[4] = message
+                self.__messages[5] = message
         else:
             message = 'O campo Confirmação de Senha é obrigatório'
-            self.__messages[4] = message
+            self.__messages[5] = message
 
     @property
     def messages(self) -> list:

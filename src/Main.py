@@ -1,7 +1,8 @@
 import sys
 
 from gui_principal import Ui_MainWindow
-from PyQt6.QtWidgets import QMainWindow, QApplication
+from PyQt6.QtWidgets import QMainWindow, QApplication 
+from PyQt6.QtWidgets import QLineEdit
 from PyQt6.QtGui import QIcon
 
 from models.User import User
@@ -102,8 +103,42 @@ class Main(Ui_MainWindow, QMainWindow):
 
     # Novos Usuários
     def __register_user(self) -> None:
-        pass
+        count = 0
+        components = self.__registation_components()
+        user = User()
+        user.first_name = components[0].text()
+        user.last_name = components[1].text()
+        user.email = components[2].text()
+        user.username = components[3].text()
+        user.password_1 = components[4].text()
+        user.password_2 = components[5].text()
+        for i, message in enumerate(user.messages):
+            if message != 0:
+                components[i-1].setText(message)
+                components[i-1].setStyleSheet('border: 2px solid rgb(255, 0, 0); color: rgb(255, 0, 0)')
+                components[i-1].setEchoMode(QLineEdit.EchoMode.Normal)
+                count += 1
+        if count > 0:
+            message = f'{count} campos a serem preenchidos'
+            self.labelRegistrationMessage.setText(message)
+            self.labelRegistrationMessage.setStyleSheet(self.__error_color)
+            self.frameRegistrationMessage.show()
+        else:
+            pass
 
+    #
+
+    def __registation_components(self) -> list:
+        components = [
+            self.lineEditRegistrationFirstName,
+            self.lineEditRegistrationLastName,
+            self.lineEditRegistrationEmail,
+            self.lineEditRegistrationUsername,
+            self.lineEditRegistrationPassword1,
+            self.lineEditRegistrationPassword2
+        ]
+        return components
+    
     # Navegação
 
     def __pageLogin(self) -> None:
