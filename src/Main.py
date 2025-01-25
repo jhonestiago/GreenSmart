@@ -1,6 +1,6 @@
 import sys
 
-from gui_principal import Ui_MainWindow
+from MainGUI import Ui_MainWindow
 from PyQt6.QtWidgets import QMainWindow, QApplication 
 from PyQt6.QtWidgets import QLineEdit
 from PyQt6.QtGui import QIcon
@@ -66,7 +66,7 @@ class Main(Ui_MainWindow, QMainWindow):
     def __init_style(self) -> None:
         self.__error_color = 'background-color: rgb(204, 41, 54); color: rgb(255, 255, 255);'
         self.__sucess_color = 'background-color: rgb(101, 184, 145);'
-        self.__error_border = 'border: 2px solid rgb(255, 0, 0);'
+        self.__error_line_edit = 'border: 2px solid rgb(255, 0, 0); color: rgb(255, 0, 0);'
     
     def __init_controllers(self) -> None:
         self.__user_control = UserControl()
@@ -107,8 +107,8 @@ class Main(Ui_MainWindow, QMainWindow):
 
     # Novos Usuários
     def __register_user(self) -> None:
-        messages = []
         inputs = self.__registation_inputs()
+        counter = 0
 
         user = User()
         user.first_name = inputs[0].text()
@@ -120,12 +120,14 @@ class Main(Ui_MainWindow, QMainWindow):
 
         for i, message in enumerate(user.messages):
             if message != 0:
-                inputs[i-1].setStyleSheet(self.__error_border)
-                messages.append(message)
+                inputs[i-1].setText(message)
+                inputs[i-1].setStyleSheet(self.__error_line_edit)
+                inputs[i-1].setEchoMode(QLineEdit.EchoMode.Normal)
+                counter += 1
 
-        if messages:
-            msg = f'Há {len(messages)} campo(s) a ser(em) preenchido(s)'
-            self.labelRegistrationMessage.setText(msg)
+        if counter > 0:
+            message = f'Há {counter} campo(s) a ser(em) preenchido(s)'
+            self.labelRegistrationMessage.setText(message)
             self.labelRegistrationMessage.setStyleSheet(self.__error_color)
             self.frameRegistrationMessage.show()
         else:
