@@ -17,10 +17,9 @@ class Main(Ui_MainWindow, QMainWindow):
         self.__init_components()
         self.__init_controllers()
         self.__init_users()
+        self.__init_style()
         self.__flag = False
-        self.__error_color = 'background-color: rgb(204, 41, 54); color: rgb(255, 255, 255);'
-        self.__sucess_color = 'background-color: rgb(101, 184, 145);'
-
+    
     def __init_components(self) -> None:
         #pageLogin
         self.frameLoginMessages.hide()
@@ -64,6 +63,11 @@ class Main(Ui_MainWindow, QMainWindow):
         self.pushButtonRegistrationBack.clicked.connect(self.__pageLogin)
         self.pushButtonRegistrationCloseMessage.clicked.connect(self.frameRegistrationMessage.hide)
 
+    def __init_style(self) -> None:
+        self.__error_color = 'background-color: rgb(204, 41, 54); color: rgb(255, 255, 255);'
+        self.__sucess_color = 'background-color: rgb(101, 184, 145);'
+        self.__error_border = 'border: 2px solid rgb(255, 0, 0);'
+    
     def __init_controllers(self) -> None:
         self.__user_control = UserControl()
 
@@ -103,33 +107,32 @@ class Main(Ui_MainWindow, QMainWindow):
 
     # Novos Usuários
     def __register_user(self) -> None:
-        count = 0
-        components = self.__registation_components()
+        messages = []
+        inputs = self.__registation_inputs()
+
         user = User()
-        user.first_name = components[0].text()
-        user.last_name = components[1].text()
-        user.email = components[2].text()
-        user.username = components[3].text()
-        user.password_1 = components[4].text()
-        user.password_2 = components[5].text()
+        user.first_name = inputs[0].text()
+        user.last_name = inputs[1].text()
+        user.email = inputs[2].text()
+        user.username = inputs[3].text()
+        user.password_1 = inputs[4].text()
+        user.password_2 = inputs[5].text()
+
         for i, message in enumerate(user.messages):
             if message != 0:
-                components[i-1].setText(message)
-                components[i-1].setStyleSheet('border: 2px solid rgb(255, 0, 0); color: rgb(255, 0, 0)')
-                components[i-1].setEchoMode(QLineEdit.EchoMode.Normal)
-                count += 1
-        if count > 0:
-            message = f'{count} campos a serem preenchidos'
-            self.labelRegistrationMessage.setText(message)
+                inputs[i-1].setStyleSheet(self.__error_border)
+                messages.append(message)
+
+        if messages:
+            msg = f'Há {len(messages)} campo(s) a ser(em) preenchido(s)'
+            self.labelRegistrationMessage.setText(msg)
             self.labelRegistrationMessage.setStyleSheet(self.__error_color)
             self.frameRegistrationMessage.show()
         else:
             pass
 
-    #
-
-    def __registation_components(self) -> list:
-        components = [
+    def __registation_inputs(self) -> list:
+        inputs = [
             self.lineEditRegistrationFirstName,
             self.lineEditRegistrationLastName,
             self.lineEditRegistrationEmail,
@@ -137,8 +140,8 @@ class Main(Ui_MainWindow, QMainWindow):
             self.lineEditRegistrationPassword1,
             self.lineEditRegistrationPassword2
         ]
-        return components
-    
+        return inputs
+        
     # Navegação
 
     def __pageLogin(self) -> None:
