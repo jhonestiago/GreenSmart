@@ -66,7 +66,7 @@ class Main(Ui_MainWindow, QMainWindow):
     def __init_style(self) -> None:
         self.__error_color = 'background-color: rgb(204, 41, 54); color: rgb(255, 255, 255);'
         self.__sucess_color = 'background-color: rgb(101, 184, 145);'
-        self.__error_line_edit = 'border: 2px solid rgb(255, 0, 0); color: rgb(255, 0, 0);'
+        self.__error_border = 'border: 2px solid rgb(255, 0, 0);'
     
     def __init_controllers(self) -> None:
         self.__user_control = UserControl()
@@ -120,9 +120,8 @@ class Main(Ui_MainWindow, QMainWindow):
 
         for i, message in enumerate(user.messages):
             if message != 0:
-                inputs[i-1].setText(message)
-                inputs[i-1].setStyleSheet(self.__error_line_edit)
-                inputs[i-1].setEchoMode(QLineEdit.EchoMode.Normal)
+                inputs[i-1].setPlaceholderText(message)
+                inputs[i-1].setStyleSheet(self.__error_border)
                 counter += 1
 
         if counter > 0:
