@@ -28,7 +28,7 @@ class User:
             self.__first_name = first_name
             self.__messages[0] = 0
         else:
-            message = 'O campo Nome é obrigatório!'
+            message = 'campo obrigatório'
             self.__messages[0] = message
 
     @property
@@ -47,7 +47,7 @@ class User:
             self.__last_name = last_name
             self.__messages[1] = 0
         else:
-            message = 'O campo Sobrenome é obrigatório'
+            message = 'campo obrigatório'
             self.__messages[1] = message
 
     @property
@@ -66,7 +66,7 @@ class User:
             self.__email = email
             self.__messages[2] = 0
         else:
-            message = 'O campo Email é obrigatório'
+            message = 'campo obrigatório'
             self.__messages[2] = message
 
     @property
@@ -85,7 +85,7 @@ class User:
             self.__username = username
             self.__messages[3] = 0
         else:
-            message = 'O campo Username é obrigatório'
+            message = 'campo obrigatório'
             self.__messages[3] = message
 
     @property
@@ -105,10 +105,10 @@ class User:
                 self.__password_1 = password
                 self.__messages[4] = 0
             else:
-                message = 'A senha deve ter entre 5 e 8 caracteres'
+                message = 'a senha deve ter 5 e 8 caracteres'
                 self.__messages[4] = message
         else:
-            message = 'O campo Senha é obrigatório'
+            message = 'campo obrigatório'
             self.__messages[4] = message
 
     @property
@@ -131,7 +131,7 @@ class User:
                 message = 'As senhas não coincidem'
                 self.__messages[5] = message
         else:
-            message = 'O campo Confirmação de Senha é obrigatório'
+            message = 'campo obrigatório'
             self.__messages[5] = message
 
     @property
