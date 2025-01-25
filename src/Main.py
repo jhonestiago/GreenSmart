@@ -101,8 +101,8 @@ class Main(Ui_MainWindow, QMainWindow):
 
 
     # Novos Usuários
-    
-        
+
+
     # Navegação
 
     def __pageLogin(self) -> None:
